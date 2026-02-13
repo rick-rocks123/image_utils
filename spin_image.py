@@ -14,6 +14,7 @@ parser.add_argument("-r","--rotate", help="Angle to rotate the image", default= 
 parser.add_argument("-s","--save", help="Save image", default="image.jpg",type=str)
 parser.add_argument("--force", action="store_true", help="Allow overwriting the original image")
 
+
 parser.add_argument("positional_image", nargs="?", type=Path, help="Image if no flag is used")
 parser.add_argument("positional_rotate", nargs="?", type=int, help="Rotation if no flag is used")
 parser.add_argument("positional_save", nargs="?", type=str, help="Image if no flag is used")
@@ -22,9 +23,9 @@ args = parser.parse_args()
 
 
 
-image_path = args.image or args.positional_image
+image_path = Path(args.image or args.positional_image)
 rotate_angle = args.rotate if args.rotate != 90 else(args.positional_rotate or args.rotate)
-save_path = args.save if args.save != "image.jpg" else (args.positional_save or args.save)
+save_path = Path(args.save if args.save != "image.jpg" else (args.positional_save or args.save))
 
 if image_path.resolve() == save_path.resolve() and not args.force:
     print("you are trying to overwrite your image.jpg file, are you sure you want that? use --force to do this")
