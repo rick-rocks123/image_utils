@@ -14,7 +14,7 @@ def main():
 
 
 
-def argparse_arguments():
+def argparse_arguments()->tuple[Path, int, Path]:
 
     parser = argparse.ArgumentParser(
         description="Rotate an image",
@@ -34,9 +34,9 @@ def argparse_arguments():
 
     args = parser.parse_args()
 
-    image_path = Path(args.image or args.positional_image)
-    rotate_angle = args.rotate if args.rotate != 90 else (args.positional_rotate or args.rotate)
-    save_path = Path(args.save if args.save != "image.jpg" else (args.positional_save or args.save))
+    image_path: Path = Path(args.image or args.positional_image)
+    rotate_angle: int = args.rotate if args.rotate != 90 else (args.positional_rotate or args.rotate)
+    save_path: Path = Path(args.save if args.save != "image.jpg" else (args.positional_save or args.save))
 
     if image_path.resolve() == save_path.resolve() and not args.force:
         print("you are trying to overwrite your image.jpg file, are you sure you want that? use --force to do this")
