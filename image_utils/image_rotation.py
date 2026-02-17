@@ -5,14 +5,23 @@ import sys
 
 
 def main():
-    image_path, rotate_angle, save_path = argparse_arguments()
+    image_path, rotate_angle, save_path, force = argparse_arguments()
+    rotate_image(image_path, rotate_angle, save_path, force)
 
-    # Open the image file
+
+def rotate_image(image_path: Path, rotate_angle: int, save_path: Path, force: bool = False):
+
+    if not image_path.exists():
+        raise FileNotFoundError(f"Image file '{image_path}' does not exist")
+
+    if save_path.exists() and image_path.resolve() == save_path.resolve() and not force:
+        raise FileExistsError(
+            "Refusing to overwrite original image. Use force=True."
+        )
+
     with Image.open(image_path) as img:
         rotater = img.rotate(rotate_angle, expand=True)
         rotater.save(save_path)
-
-
 
 def argparse_arguments()->tuple[Path, int, Path]:
 
@@ -23,7 +32,7 @@ def argparse_arguments()->tuple[Path, int, Path]:
     )
 
     parser.add_argument("-i","--image", help="Path to image", type=Path)
-    parser.add_argument("-r","--rotate", help="Angle to rotate the image", default= 90 ,type=str)
+    parser.add_argument("-r","--rotate", help="Angle to rotate the image", default= 90 ,type=int)
     parser.add_argument("-s","--save", help="Save image", default="image.jpg",type=str)
     parser.add_argument("--force", action="store_true", help="Allow overwriting the original image")
 
@@ -42,11 +51,10 @@ def argparse_arguments()->tuple[Path, int, Path]:
         print("you are trying to overwrite your image.jpg file, are you sure you want that? use --force to do this")
         sys.exit()
 
-    if not image_path or not image_path.exists():
-        parser.error(f"Image file {image_path} does not exist")
+    if image_path is None:
+        parser.error("No image path provided")
 
-    else:
-        return image_path, rotate_angle, save_path
+    return image_path, rotate_angle, save_path, args.force
 
 
 
