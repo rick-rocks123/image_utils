@@ -11,6 +11,6 @@ After installing, you can use the CLI command `rotate-image` instead of py main.
 For testing or contributing:
 
 ```bash
-git clone https://github.com/.../image-utils.git
-cd image-utils
-pip install -e . 
+git clone https://github.com/rick-rocks123/image_utils.git
+cd <repo-folder> 
+pip install -e .

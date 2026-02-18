@@ -1,4 +1,4 @@
-from image_utils import rotate_image, argparse_arguments
+from image_utils_spin import rotate_image, argparse_arguments
 def main():
     image_path, rotate_angle, save_path, force = argparse_arguments()
 

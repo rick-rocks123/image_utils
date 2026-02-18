@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "image-utils-spin"
-version = "0.1.0"
+version = "0.1.2"
 description = "A simple CLI and Python tool to rotate images"
 authors = [
   { name = "uzi"}
@@ -23,9 +23,9 @@ classifiers = [
 ]
 
 [project.scripts]
-rotate-image = "image_utils.image_rotation:main"
+rotate-image = "image_utils_spin.image_rotation:main"
 
 [project.urls]
-Repository = "https://github.com/rick-rocks123/image_spinner"
+Repository = "https://github.com/rick-rocks123/image_utils"
 
 
