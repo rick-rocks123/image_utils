@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6dbe0253-5092-4cf3-a599-85878f133f80" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image_spinner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image_utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/biscuit.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/biscuit.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spin_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_utils/image_rotation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/biscuit.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tests/biscuit.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/image_spinner.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/image_spinner.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +37,7 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="sortKey" value="BY_TIME_ASCENDING" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
@@ -68,6 +62,11 @@
       <recent name="C:\Users\liebe\OneDrive\programming\spinner\spinners" />
       <recent name="C:\Users\liebe\OneDrive\programming\spinner" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="pip install -e ." />
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="spin_image" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">

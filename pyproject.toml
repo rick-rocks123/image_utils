@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "image-utils-spin"
+version = "0.1.0"
+description = "A simple CLI and Python tool to rotate images"
+authors = [
+  { name = "uzi"}
+]
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = [
+  "Pillow"
+]
+keywords = ["image", "rotate", "CLI", "python"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+
+[project.scripts]
+rotate-image = "image_utils.image_rotation:main"
+
+[project.urls]
+Repository = "https://github.com/rick-rocks123/image_spinner"
+
+
