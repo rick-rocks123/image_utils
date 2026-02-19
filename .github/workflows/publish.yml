@@ -34,11 +34,8 @@ jobs:
           rm -rf build/ dist/ *.egg-info
           python -m build
 
-      # 5️⃣ Publish to PyPI
+      # 5️⃣ Publish to PyPI using Trusted Publisher (OIDC)
       - name: Upload to PyPI
-        env:
-          TWINE_USERNAME: __token__
-          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
         run: |
           python -m twine upload dist/*
 
